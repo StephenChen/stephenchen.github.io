@@ -3,12 +3,33 @@
         <title>所有文章 - 我的全新 Hugo 网站</title>
         <link>https://stephenchen.github.io/posts/</link>
         <description>所有文章 | 我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 02 Jul 2020 01:35:13 &#43;0800</lastBuildDate><atom:link href="https://stephenchen.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 07 Jul 2020 22:34:11 &#43;0800</lastBuildDate><atom:link href="https://stephenchen.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>云计算概念与发展</title>
+    <link>https://stephenchen.github.io/posts/%E4%BA%91%E4%BB%8E%E4%B8%9A/</link>
+    <pubDate>Tue, 07 Jul 2020 22:34:11 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://stephenchen.github.io/posts/%E4%BA%91%E4%BB%8E%E4%B8%9A/</guid>
+    <description><![CDATA[云计算概念与发展 云计算发展史 云的发展历史 自建机房 -&gt; IDC 托管 -&gt; 云计算 自建机房： 机房设计，土建，机柜，UPS，精密空调，跳线 服务器，存储，网络上架]]></description>
+</item><item>
     <title>My First Post</title>
     <link>https://stephenchen.github.io/posts/my-first-post/</link>
     <pubDate>Thu, 02 Jul 2020 01:35:13 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://stephenchen.github.io/posts/my-first-post/</guid>
     <description><![CDATA[first ]]></description>
+</item><item>
+    <title></title>
+    <link>https://stephenchen.github.io/posts/command/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://stephenchen.github.io/posts/command/</guid>
+    <description><![CDATA[jenkins mac  /usr/local/opt/jenkins/homebrew.mxcl.jenkins.plist brew services start jenkins  docker docker run \ -u root \ --rm \ -d \ -p 8080:8080 \ -p 50000:50000 \ -v /Users/chenxinyuan/docker-volume:/var/jenkins_home \ -v /var/run/docker.sock:/var/run/docker.sock \ jenkins/jenkins:lts ]]></description>
+</item><item>
+    <title></title>
+    <link>https://stephenchen.github.io/posts/gomod/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://stephenchen.github.io/posts/gomod/</guid>
+    <description><![CDATA[go使用go-gateway时 -I$GOPATH/pkg/mod/github.com/grpc-ecosystem/grpc-gateway@v1.14.6/third_party/googleapis // 编译google.api protoc -I. -I$GOPATH/pkg/mod/github.com/grpc-ecosystem/grpc-gateway@v1.14.6/third_party/googleapis --go_out=plugins=grpc:. google/api/*.proto #编译hello_http.proto为hello_http.pb.pr]]></description>
 </item></channel>
 </rss>
