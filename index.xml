@@ -3,9 +3,16 @@
         <title>我的全新 Hugo 网站</title>
         <link>https://stephenchen.github.io/</link>
         <description>我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 07 Jul 2020 22:34:11 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 22 Jul 2020 01:35:13 &#43;0800</lastBuildDate>
             <atom:link href="https://stephenchen.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>proto</title>
+    <link>https://stephenchen.github.io/posts/gomod/</link>
+    <pubDate>Wed, 22 Jul 2020 01:35:13 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://stephenchen.github.io/posts/gomod/</guid>
+    <description><![CDATA[go使用go-gateway时 -I$GOPATH/pkg/mod/github.com/grpc-ecosystem/grpc-gateway@v1.14.6/third_party/googleapis // 编译google.api protoc -I. -I$GOPATH/pkg/mod/github.com/grpc-ecosystem/grpc-gateway@v1.14.6/third_party/googleapis --go_out=plugins=grpc:. google/api/*.proto #编译hello_http.proto为hello_http.pb.pr]]></description>
+</item><item>
     <title>云计算概念与发展</title>
     <link>https://stephenchen.github.io/posts/%E4%BA%91%E4%BB%8E%E4%B8%9A/</link>
     <pubDate>Tue, 07 Jul 2020 22:34:11 &#43;0800</pubDate>
@@ -25,13 +32,7 @@
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://stephenchen.github.io/posts/command/</guid>
-    <description><![CDATA[jenkins mac  /usr/local/opt/jenkins/homebrew.mxcl.jenkins.plist brew services start jenkins  docker docker run \ -u root \ --rm \ -d \ -p 8080:8080 \ -p 50000:50000 \ -v /Users/chenxinyuan/docker-volume:/var/jenkins_home \ -v /var/run/docker.sock:/var/run/docker.sock \ jenkins/jenkins:lts ]]></description>
-</item><item>
-    <title></title>
-    <link>https://stephenchen.github.io/posts/gomod/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://stephenchen.github.io/posts/gomod/</guid>
-    <description><![CDATA[go使用go-gateway时 -I$GOPATH/pkg/mod/github.com/grpc-ecosystem/grpc-gateway@v1.14.6/third_party/googleapis // 编译google.api protoc -I. -I$GOPATH/pkg/mod/github.com/grpc-ecosystem/grpc-gateway@v1.14.6/third_party/googleapis --go_out=plugins=grpc:. google/api/*.proto #编译hello_http.proto为hello_http.pb.pr]]></description>
+    <description><![CDATA[jenkins mac  /usr/local/opt/jenkins/homebrew.mxcl.jenkins.plist brew services start jenkins   title: &ldquo;proto&rdquo; date: 2020-08-09T01:35:13+08:00 draft: false author: &ldquo;StephenChen&rdquo; description: &quot;&rdquo;
+tags: [&ldquo;First&rdquo;,&ldquo;second&rdquo;] categories: [&ldquo;aaa&rdquo;,&ldquo;bbb&rdquo;] featuredImage: &quot;&rdquo; featuredImagePreview: &quot;&rdquo; docker docker run \ -u root \ --rm \ -d \ -p 8080:8080 \ -p 50000:50000 \ -v /Users/chenxinyuan/docker-volume:/var/jenkins_home \ -v /var/run/docker.sock:/var/run/docker.sock \ jenkins/jenkins:lts ]]></description>
 </item></channel>
 </rss>
