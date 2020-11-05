@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>read - 分类 - 我的全新 Hugo 网站</title>
+        <link>https://stephenchen.github.io/categories/read/</link>
+        <description>read - 分类 - 我的全新 Hugo 网站</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 02 Nov 2020 19:35:13 &#43;0800</lastBuildDate><atom:link href="https://stephenchen.github.io/categories/read/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux</title>
+    <link>https://stephenchen.github.io/posts/linux/linux/</link>
+    <pubDate>Mon, 02 Nov 2020 19:35:13 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://stephenchen.github.io/posts/linux/linux/</guid>
+    <description><![CDATA[asd 外包公司：老板是操作系统 初创期：这个老板基于开放的营商环境（x86 体系结构），创办一家外包公司（系统的启动）。因为一开始没有其他员工，老板]]></description>
+</item></channel>
+</rss>
