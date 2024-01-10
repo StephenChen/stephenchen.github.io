@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mapgis on Stephen Chen</title><link>stephenchen.github.io/tags/mapgis/</link><description>Recent content in mapgis on Stephen Chen</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 04 Jan 2024 14:11:09 +0800</lastBuildDate><atom:link href="stephenchen.github.io/tags/mapgis/index.xml" rel="self" type="application/rss+xml"/><item><title>MapGIS desktop java x64 Linux 因端口范围启动失败</title><link>stephenchen.github.io/p/mapgis-desktop-java-x64-linux-%E5%9B%A0%E7%AB%AF%E5%8F%A3%E8%8C%83%E5%9B%B4%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5/</link><pubDate>Thu, 04 Jan 2024 14:11:09 +0800</pubDate><guid>stephenchen.github.io/p/mapgis-desktop-java-x64-linux-%E5%9B%A0%E7%AB%AF%E5%8F%A3%E8%8C%83%E5%9B%B4%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5/</guid><description>&lt;p>x64 centos 启动 desktop java 时，报错如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">QuantumRenderer: shutdown
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Caused by: py4j.Py4JNetworkException
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> at py4j.GatewayServer.startSocket(GatewayServer.java:788)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> at py4j.GatewayServer.start(GatewayServer.java:763)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> at py4j.GatewayServer.start(GatewayServer.java:746)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> at com.zondy.mapgis.jmapgispy.DefaultGateway.startServer(DefaultGateway.java:53)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> at com.zondy.mapgis.jmapgispy.DefaultGateway.startServer(DefaultGateway.java:45)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ... 1 more
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Caused by: java.net.BindException: Cannot assign requested address (Bind failed)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> at java.net.PlainSocketImpl.socketBind(Native Method)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> at java.net.ServerSocket.bind(ServerSocket.java:375)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> at py4j.GatewayServer.startSocket(GatewayServer.java:786)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ... 23 more
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>java.net.BindException: Cannot assign requested address&lt;/code> 经查可能是找端口号失败的问题。desktop java 启动时会顺带启动一个 java 服务为工具箱和 python 控制台服务，端口号查找规则为 &lt;code>23333 - 65535&lt;/code> 。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>r@h /&lt;span class="o">]&lt;/span>$ cat /proc/sys/net/ipv4/ip_local_port_range
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="m">32768&lt;/span> &lt;span class="m">60999&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>desktop java 默认端口超出了系统设置的动态端口范围导致失败。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>r@h /&lt;span class="o">]&lt;/span>$ &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;net.ipv4.ip_local_port_range = 22222 60999&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/sysctl.conf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>r@h /&lt;span class="o">]&lt;/span>$ sysctl -p
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>r@h /&lt;span class="o">]&lt;/span>$ cat /proc/sys/net/ipv4/ip_local_port_range
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="m">22222&lt;/span> &lt;span class="m">60999&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>修改生效后问题解决。&lt;/p></description></item></channel></rss>
